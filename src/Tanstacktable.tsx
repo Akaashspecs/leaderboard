@@ -4,14 +4,11 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { TiEyeOutline } from "react-icons/ti";
 import { AiOutlineStock } from "react-icons/ai";
 
-import { TbArrowsSort } from "react-icons/tb";
-import { TiArrowSortedUp } from "react-icons/ti";
-import { TiArrowSortedDown } from "react-icons/ti";
 import { mockData } from "./helper";
 
 const TaskTable = () => {
@@ -118,7 +115,7 @@ const TaskTable = () => {
                 ${i % 2 === 0 ? "" : "bg-neutral-100"}
                 `}
               >
-                {row.getVisibleCells().map((cell, index) => {
+                {row.getVisibleCells().map((cell) => {
                   return (
                     <td key={cell.id} className="px-3.5 py-2  ">
                       {flexRender(

@@ -45,7 +45,7 @@ function App() {
         <div className="h-20 border w-full border-b-gray-400"></div>
         <div className="w-[1200px] flex gap-4 mt-3">
           {header.map((item) => (
-            <div className="flex  items-center">
+            <div className="flex  items-center" key={item.headers}>
               {item?.headers === "LeaderBoard" && (
                 <SiWindows11 className="mr-1" />
               )}{" "}
@@ -76,9 +76,7 @@ function App() {
                     className="basic-single"
                     classNamePrefix="select"
                     defaultValue={selectedOption}
-                    onChange={(newValue, actionMeta) =>
-                      setSelectedOption(newValue)
-                    }
+                    onChange={(newValue) => setSelectedOption(newValue)}
                     options={options}
                     styles={customStyles}
                   />
