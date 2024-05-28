@@ -25,18 +25,6 @@ function App() {
       borderRadius: " 0px 10px 10px 0px",
       color: "#FFFFFF",
     }),
-    option: (base, { isSelected }: { isSelected: boolean }) => ({
-      ...base,
-      background: "#262626",
-      color: "#FFFFFF", // Change text color to white
-      ":active": {
-        backgroundColor: isSelected ? "#FFFFFF" : "#FFFFFF",
-      },
-      "&:hover": {
-        backgroundColor: "#6B7280",
-      },
-      hover: "#262626",
-    }),
   };
 
   return (
